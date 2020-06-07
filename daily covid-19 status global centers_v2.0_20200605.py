@@ -61,30 +61,19 @@ items = soup.select('tr[class="sgXwHf wdLSAe YvL7re"]') #전체 테이블 + 갯�
 #target_countries=["미국", "브라질", "러시아", "영국", "인도", "독일", "중국", "싱가폴", "베트남"]
 
 
-countries=[]; confirmeds=[]; confirmed_mills=[]; recovereds=[]; deaths=[];               
+all_countries=[]; countries=[]; confirmeds=[]; confirmed_mills=[]; recovereds=[]; deaths=[];               
 #limit = 10 #top = 10
 #index = 0
-i = 0
+#i = 0
 #for item in items[:limit]: # top=10
-for item in items:  
+for item in items: 
     #country = item.find('tr', {'class' :'sgXwHf wdLSAe YvL7re'}).text #에러!
     #country = item.find('div', {'class':'TWa0lb'}).text #국가, 전세계 포함
-    country = item.find('div', {'class':'pcAJd'}).text #국가, 전세계 포함 
-    # c = "미국"
-    # if country == c:
-    #     #print(country)
-    #     countries.append(country)
-    # #else:
-    #        pass 
-      #print(len(country))  
-      #print(country)
-    countries.append(country)
-    #print(countries)
-  
-    #confirmed = item.find('td', {'class': 'l3HOY'}).text #숫자 1개  
-    #print(confirmed)
-    #confirmeds.append(confirmed)
-    #print(countries, confirmeds)
+    country = item.find('div', {'class':'pcAJd'}).text #국가, 전세계 포함     
+    countries.append(country)  
+    countries
+    print(countries)
+ 
     
     numbers = item.find_all('td')  #숫자 전부
     confirmed = numbers[0].text.strip()
@@ -105,7 +94,7 @@ for item in items:
     
 result = {'국가':countries,'확진자수':confirmeds,'백만명당':confirmed_mills, \
            '완치자수': recovereds,'사망자수': deaths}
-df = pd.DataFrame(result, columns=['국가','확진자수' , '완치자수', '사망자수'])
+df = pd.DataFrame(result, columns=['국가','확진자수','완치자수', '사망자수'])
 #df.to_excel("K:/My files/Download/google_covid19_reporting_06051640.xlsx")
 #df.to_excel("C:/Vincent/torrent/Download/PYTHON/Spyder Projects/Start of June/google_covid19_reporting_06051640.xlsx")
 print(df)
