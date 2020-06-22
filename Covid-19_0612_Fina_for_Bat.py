@@ -5,9 +5,6 @@ Created on Mon Jun  11 09:11:20 2020
 @author: vincent.yu
 """
 import os
-os.environ["HTTP_PROXY"] = "http://70.10.15.10:8080"
-os.environ["HTTPS_PROXY"] = "http://70.10.15.10:8080"
-os.environ["PYTHONHTTPSVERIFY"] = "0"
 
 #해외센터 지역 코로나 현황 
 # v1.0 top = 10 contries  
