@@ -9,9 +9,6 @@ Created on Thu May 28 16:28:50 2020
 #데이터 출처 : 위키백과European Centre for Disease Prevention and Control
 
 import os
-os.environ["HTTP_PROXY"] = "http://70.10.15.10:8080"
-os.environ["HTTPS_PROXY"] = "http://70.10.15.10:8080"
-os.environ["PYTHONHTTPSVERIFY"] = "0"
 
 import requests
 from bs4 import BeautifulSoup
