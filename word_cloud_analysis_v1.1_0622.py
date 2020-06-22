@@ -8,9 +8,6 @@ Word Cloud Analysis Eng Ver 1.0
 
 """
 import os
-os.environ["HTTP_PROXY"] = "http://70.10.15.10:8080"
-os.environ["HTTPS_PROXY"] = "http://70.10.15.10:8080"
-os.environ["PYTHONHTTPSVERIFY"] = "0"
 
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
