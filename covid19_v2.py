@@ -1,7 +1,4 @@
 import os
-os.environ["HTTP_PROXY"] = "http://70.10.15.10:8080"
-os.environ["HTTPS_PROXY"] = "http://70.10.15.10:8080"
-os.environ["PYTHONHTTPSVERIFY"] = "0"
 
 import pandas as pd
 import requests
